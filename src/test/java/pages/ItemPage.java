@@ -10,9 +10,9 @@ public class ItemPage extends CommonMethods {
     @FindBy(xpath = "//h1[@class='a-size-base-plus a-text-bold']")
     public WebElement aboutItemText;
 
+//in real life scenario this class will have dozens of elements. this structure just example
 
-
-    public ItemPage(){
+    public ItemPage() {
         PageFactory.initElements(driver, this);
     }
 }

@@ -12,7 +12,9 @@ public class HamburgerMenuDropdown extends CommonMethods {
     @FindBy(xpath = "//a[text()='Televisions']")
     public WebElement televisionsLink;
 
-public HamburgerMenuDropdown(){
-    PageFactory.initElements(driver,this);
-}
+    //in real life scenario this class will have dozens of elements. this structure just example
+
+    public HamburgerMenuDropdown() {
+        PageFactory.initElements(driver, this);
+    }
 }
