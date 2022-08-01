@@ -10,22 +10,22 @@ import utils.CommonMethods;
 public class AboutItemIsPresentSteps extends CommonMethods {
     @Given("user navigate to Amazon {string}")
     public void userNavigateToAmazon(String country) {
-  Assert.assertEquals(landingPage.countryVerify.getText(),country );
+  Assert.assertEquals(landingPage.getCountryVerify().getText(),country );
     }
 
     @When("user finds item he likes using sort {string}")
     public void userFindsItemHeLikesUsingSort(String sortType) {
-       click(landingPage.hamburgerAll);
+       click(landingPage.getHamburgerAll());
 
        implicitlyWait();
-       click(hamburgerMenuDropdown.tvElectronicsLink);
-       click(hamburgerMenuDropdown.televisionsLink);
-       click(tvSearchPage.samsungCheckBox);
+       click(hamburgerMenuDropdown.getTvElectronicsLink());
+       click(hamburgerMenuDropdown.getTelevisionsLink());
+       click(tvSearchPage.getSamsungCheckBox());
        implicitlyWaitOff();
 
-       selectDD(tvSearchPage.sortByDropDown, sortType);
+       selectDD(tvSearchPage.getSortByDropDown(), sortType);
 
-       click(tvSearchPage.secondSearchResult);
+       click(tvSearchPage.getSecondSearchResult());
        driver.getWindowHandle();
        driver.switchTo().window(getNextHandle(driver.getWindowHandle()));
 
@@ -35,9 +35,9 @@ public class AboutItemIsPresentSteps extends CommonMethods {
     @Then("user able to see {string}")
     public void userAbleToSee(String textToConfirm) {
         implicitlyWait();
-        Assert.assertTrue(itemPage.aboutItemText.isDisplayed());
-        scroll(itemPage.aboutItemText);
-        Assert.assertEquals(itemPage.aboutItemText.getText(), textToConfirm);
+        Assert.assertTrue(itemPage.getAboutItemText().isDisplayed());
+        scroll(itemPage.getAboutItemText());
+        Assert.assertEquals(itemPage.getAboutItemText().getText(), textToConfirm);
 
     }
 

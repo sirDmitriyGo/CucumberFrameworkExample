@@ -9,14 +9,29 @@ import utils.CommonMethods;
 
 public class TVSearchPage extends CommonMethods {
     @FindBy(xpath = "//span[text()='Samsung']")
-    public WebElement samsungCheckBox;
+    private WebElement samsungCheckBox;
+
+    public WebElement getSamsungCheckBox() {
+        return samsungCheckBox;
+    }
+
+
+
     @FindBy(xpath = "//select[@class='a-native-dropdown a-declarative']")
-    public WebElement sortByDropDown;
+    private WebElement sortByDropDown;
+
+    public WebElement getSortByDropDown() {
+        return sortByDropDown;
+    }
 
     // dynamic element by position on search table
 
     @FindBy(xpath = "//div[@data-index='2']")
-    public WebElement secondSearchResult;
+    private WebElement secondSearchResult;
+
+    public WebElement getSecondSearchResult() {
+        return secondSearchResult;
+    }
 
     public TVSearchPage(){
         PageFactory.initElements(driver, this);

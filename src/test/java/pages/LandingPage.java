@@ -9,10 +9,19 @@ public class LandingPage extends CommonMethods {
 
 
     @FindBy(xpath = "//i[@class='hm-icon nav-sprite']")
-    public WebElement hamburgerAll;
-    @FindBy(xpath = "//span[text()='.in']")
-    public WebElement countryVerify;
+    private WebElement hamburgerAll;
 
+    public WebElement getHamburgerAll() {
+        return hamburgerAll;
+    }
+
+
+    @FindBy(xpath = "//span[text()='.in']")
+    private WebElement countryVerify;
+
+    public WebElement getCountryVerify() {
+        return countryVerify;
+    }
 //in real life scenario this class will have dozens of elements. this structure just example
 
     public LandingPage() {

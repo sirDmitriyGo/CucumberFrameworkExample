@@ -7,9 +7,14 @@ import utils.CommonMethods;
 
 public class ItemPage extends CommonMethods {
 
-    @FindBy(xpath = "//h1[@class='a-size-base-plus a-text-bold']")
-    public WebElement aboutItemText;
 
+
+    @FindBy(xpath = "//h1[@class='a-size-base-plus a-text-bold']")
+    private WebElement aboutItemText;
+
+    public WebElement getAboutItemText() {
+        return aboutItemText;
+    }
 //in real life scenario this class will have dozens of elements. this structure just example
 
     public ItemPage() {

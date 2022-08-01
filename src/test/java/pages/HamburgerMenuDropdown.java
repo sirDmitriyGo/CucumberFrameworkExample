@@ -8,9 +8,19 @@ import utils.CommonMethods;
 public class HamburgerMenuDropdown extends CommonMethods {
 
     @FindBy(xpath = "//div[text()='TV, Appliances, Electronics']")
-    public WebElement tvElectronicsLink;
+    private WebElement tvElectronicsLink;
+
+    public WebElement getTvElectronicsLink() {
+        return tvElectronicsLink;
+    }
+
     @FindBy(xpath = "//a[text()='Televisions']")
-    public WebElement televisionsLink;
+    private WebElement televisionsLink;
+
+
+    public WebElement getTelevisionsLink() {
+        return televisionsLink;
+    }
 
     //in real life scenario this class will have dozens of elements. this structure just example
 
